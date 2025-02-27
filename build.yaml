@@ -1,0 +1,10 @@
+targets:
+  $default:
+    builders:
+      source_gen:combining_builder:
+        generate_for:
+          - "**/[!objectbox]**.dart"
+        options:
+          build_extensions:
+            '^lib/dto/{{}}.dart': 'lib/dto/mapper/{{}}.g.dart'
+            '^lib/repository/{{}}.dart': 'lib/repository/generated/{{}}.g.dart'
